@@ -3,12 +3,13 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Products from './pages/Products';
+import Contact from './pages/Contact';
 import {
   createBrowserRouter,
   createRoutesFromElements,
   RouterProvider,
   Route
-} from "react-router-dom"
+} from "react-router-dom";
 //import hranaImage from './assets/food_image.svg';
 //import scooterImage from './assets/scooter_image.svg';
 function App() {
@@ -18,6 +19,8 @@ function App() {
       <Route path='/' element={<NavBar/>}>
         <Route path='/' element={<Home/>}/>
         <Route path='/products' element={<Products/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+
       </Route>
     ])
   )
