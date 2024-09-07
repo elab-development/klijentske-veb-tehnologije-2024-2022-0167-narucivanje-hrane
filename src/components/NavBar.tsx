@@ -1,18 +1,20 @@
 import React from 'react';
-import './NavBar.css';
+import '../App.css';
+import { Outlet, Link } from 'react-router-dom';
 
 const NavBar: React.FC = () => {
   return (
-    <header className="navbar">
-      <nav>
-        <a href="/">Početna</a>
-        <a href="/proizvodi">Proizvodi</a>
-        <a href="/korpa">Korpa</a>
-        <a href="/kontakt">Kontakt</a>
-        <a href="/profil">Profil</a>
-        <button className="prijaviSeBtn">Prijavi se</button>
-      </nav>
-    </header>
+    <>
+    <nav className="navbar">
+      <Link to="/">Početna</Link>
+      <Link to="/products">Proizvodi</Link>
+      <Link to="/cart">Korpa</Link>
+      <Link to="/contact">Kontakti</Link>
+      <Link to="/profile">Profil</Link>
+      <Link to="/signIn"><button className="prijaviSeBtn">Prijavi se</button></Link>
+    </nav>
+    <Outlet/>
+    </>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import '../App.css';
 import s1 from '../assets/slika 1.png';
 import s2 from '../assets/slika 2.png';
 
