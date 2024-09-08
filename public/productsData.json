@@ -1,0 +1,75 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "imagePath": "../assets/food/1.png",
+            "name": "Capricciosa",
+            "description": "Testo, pelat, šunka, sir, šampinjoni",
+            "price": 1280,
+            "amount": 0
+        },
+
+        {
+            "id": 2,
+            "imagePath": "../assets/food/2.png",
+            "name": "Margarita",
+            "description": "Testo, pelat, sir",
+            "price": 1280,
+            "amount": 0
+        },
+
+        {
+            "id": 3,
+            "imagePath": "../assets/food/3.png",
+            "name": "Mađarica",
+            "description": "Testo, pelat, feferone šunka, sir, feta sir, šampinjoni, kulen",
+            "price": 1530,
+            "amount": 0
+        },
+
+        {
+            "id": 4,
+            "imagePath": "../assets/food/4.png",
+            "name": "Fungi",
+            "description": "Testo, pelat, sir, šampinjoni",
+            "price": 1620,
+            "amount": 0
+        },
+
+        {
+            "id": 5,
+            "imagePath": "../assets/food/5.png",
+            "name": "Cheeseburger",
+            "description": "Zemička, govedina, sir, senf, kečap, kiseli krastavci i luk, caribic sos, zelena salata",
+            "price": 590,
+            "amount": 0
+        },
+
+        {
+            "id": 6,
+            "imagePath": "../assets/food/6.png",
+            "name": "Rapsody burger",
+            "description": "Juneće meso, cheddar sir, slaninica, BBQ sos, spicy cream, iceberg, paradajz",
+            "price": 630,
+            "amount": 0
+        },
+
+        {
+            "id": 7,
+            "imagePath": "../assets/food/7.png",
+            "name": "Chicken burger",
+            "description": "Pileći burger, cheddar sir, cezar dresing, rukola, krastavčići",
+            "price": 610,
+            "amount": 0
+        },
+
+        {
+            "id": 8,
+            "imagePath": "../assets/food/8.png",
+            "name": "Space X burger",
+            "description": "Juneće meso, cheddar sir, slaninica, burger boy sos, spicy cream, krastavčići, zelena salata",
+            "price": 790,
+            "amount": 0
+        }
+    ]
+}

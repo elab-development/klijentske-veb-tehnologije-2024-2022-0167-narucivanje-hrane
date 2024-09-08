@@ -13,15 +13,7 @@
   background: #f0ead6;
   border-bottom-style: solid;
   border-bottom-color: #ff6f61;
-  border-bottom-color: linear-gradient(90deg, rgba(255,111,97,0) 0%, rgba(255,111,97,1) 50%, rgba(255,111,97,0) 100%);
   padding: 10px 20px;
-}
-
-.navbar a {
-  margin-right: 30px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
 }
 
 .prijaviSeBtn {
@@ -75,10 +67,13 @@
 
 /*ONE PRODUCT*/
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   border-style: solid;
   border-width: 2px;
   background-color: #36454f;
-  margin: 10px;
+  margin: 20px;
   padding: 10px;
   max-width: 200px;
 }
@@ -98,6 +93,7 @@
 }
 
 .card-bottom {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -112,7 +108,8 @@
 .all-products {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
+  flex-wrap: wrap;
+  margin: 20px 60px;
 }
 
 @keyframes logo-spin {

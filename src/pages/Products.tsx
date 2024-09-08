@@ -2,17 +2,28 @@ import React from 'react'
 import '../App.css'
 import OneProduct from '../components/OneProduct'
 import { Product } from '../models/product'
-import f1 from '../assets/food/2.png'
 
-const myProduct = new Product("../assets/food/2.png", "Pica", "Lepa pica", "RSD 1500")
+interface ProductsProps {
+  products: Product[];
+  onAdd: (id:number) => void;
+  onRemove: (id:number) => void;
+  amountNum: number;
+}
 
-const Products = () => {
+const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, amountNum}) => {
   return (
+    <>
+    <h1>PROIZVODI</h1>
     <div className="all-products">
-        <OneProduct product={myProduct}/>
-        <OneProduct product={myProduct}/>
-        <OneProduct product={myProduct}/>
+        {products.map((product) => (
+          <OneProduct 
+          product={product}
+          onAdd={()=>onAdd(product.id)}
+          onRemove={()=>onRemove(product.id)}
+          amountNum={amountNum}/>
+        ))}
     </div>
+    </>
   )
 }
 
