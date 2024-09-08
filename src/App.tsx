@@ -3,6 +3,7 @@ import NavBar from './components/NavBar';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Contact from './pages/Contact';
+import SignIn from './pages/SignIn';
 import { Product } from './models/product';
 import { useEffect, useState } from 'react';
 import {
@@ -83,6 +84,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} amountNum={amountNum}/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/signIn' element={<SignIn/>}/>
 
       </Route>
     ])
