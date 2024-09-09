@@ -9,12 +9,10 @@ const SignIn: React.FC = () => {
     const [password, setPassword] = useState('');
 
     const handleLoginClick = () => {
-        // Handle login logic
         console.log(`Username: ${username}, Password: ${password}`);
     };
 
     const handleRegisterClick = () => {
-        // Handle registration logic or redirect to a registration page
         console.log("Redirect to Register");
     };
 

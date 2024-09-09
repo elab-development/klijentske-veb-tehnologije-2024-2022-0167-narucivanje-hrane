@@ -243,3 +243,94 @@
 .button-group button {
   width: 35%;
 }
+
+/* PROFILNA */
+
+/* .profile-container h1 {
+  font-weight: normal;
+  font-size: 42px;
+  color: #333;
+}
+
+.profile-container h2 {
+  font-weight: normal;
+  font-size: 32px;
+  color: #333;
+}
+
+.profile-container img {
+  margin-right: 50px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: #f0ead6;
+  width: 100%;
+}
+ */
+
+ .profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px;
+  background-color: #f0ead6;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.profile-container img {
+  margin-right: 50px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.profile-container h1 {
+  font-weight: normal;
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
+  flex-wrap: wrap;
+}
+
+.details h2 {
+  font-weight: normal;
+  font-size: 30px;
+  color: #333;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: row;
+  gap: 202px; /* razmak izmedju emaila i broja telefona */
+  font-size: 16px; 
+  margin-top: 5px; 
+  color: #333;
+  flex-wrap: wrap;
+}
