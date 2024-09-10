@@ -7,10 +7,16 @@ interface ProductsProps {
   products: Product[];
   onAdd: (id:number) => void;
   onRemove: (id:number) => void;
-  amountNum: number;
+  onDelete: (id:number) => void;
+  version: ComponentProductVersion;
 }
 
-const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, amountNum}) => {
+export enum ComponentProductVersion {
+  primary = 'primary',
+  secondary = 'secondary'
+}
+
+const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, onDelete}) => {
   return (
     <>
     <h1>PROIZVODI</h1>
@@ -20,7 +26,8 @@ const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, amountNum
           product={product}
           onAdd={()=>onAdd(product.id)}
           onRemove={()=>onRemove(product.id)}
-          amountNum={amountNum}/>
+          onDelete={()=>onDelete(product.id)}
+          version={ComponentProductVersion.primary}/>
         ))}
     </div>
     </>

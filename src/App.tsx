@@ -1,8 +1,9 @@
 import './App.css';
 import NavBar from './components/NavBar';
 import Home from './pages/Home';
-import Products from './pages/Products';
+import Products, { ComponentProductVersion } from './pages/Products';
 import Contact from './pages/Contact';
+import Cart from './pages/Cart'
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
 import { Product } from './models/product';
@@ -21,13 +22,10 @@ function App() {
   const addToCart = (id: number) => {
     products.map((product) => {
       if(product.id == id) {
-        console.log("a " + product.amount);
         product.amount = product.amount + 1;
-        console.log("b " + product.amount);
         const a = amountNum + 1;
-        console.log("c");
         setAmountNum(a);
-        console.log("d");
+        console.log(product.amount);
       }
     })
   };
@@ -35,35 +33,32 @@ function App() {
   const removeFromCart = (id: number) => {
     products.map((product) => {
       if(product.id == id) {
-        if(amountNum > 0) {
+        if(product.amount > 0) {
           product.amount = product.amount - 1;
-          console.log("1 " + product.amount);
           const a = amountNum - 1;
-          console.log("2");
           setAmountNum(a);
-          console.log("3");
+          console.log(product.amount);
         } else{
-          console.log("4");
           alert("Broj proizvoda je vec 0.");
-          console.log("5");
         }   
       }
     });
   };
 
+  const deleteFromCart = (id: number) => {
+    products.map((product) => {
+      if(product.id == id) {
+        console.log("0/obrisano");
+        product.amount = 0;
+        setAmountNum(0);
+        console.log("obrisano");
+      }
+    })
+  }
+
   const [amountNum, setAmountNum] = useState(0);
 
-  const products: Product[] = [
-    new Product(1, "/assets/food/1.png", "Capriciossa", "Opis", 1280, 0),
-    new Product(1, "../assets/food/2.png", "Margarita", "Opis", 1280, 0),
-    new Product(1, "../assets/food/3.png", "Madjarica", "Opis", 1530, 0),
-    new Product(1, "/assets/food/1.png", "Capriciossa", "Opis", 1280, 0),
-    new Product(1, "../assets/food/2.png", "Margarita", "Opis", 1280, 0),
-    new Product(1, "../assets/food/3.png", "Madjarica", "Opis", 1530, 0),
-    new Product(1, "/assets/food/1.png", "Capriciossa", "Opis", 1280, 0),
-    new Product(1, "../assets/food/2.png", "Margarita", "Opis", 1280, 0)
-  ]
-  /*const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -76,14 +71,15 @@ function App() {
       console.log(productsArray);
       setProducts(productsArray);
     }
-    fetchData;
-  }, products )*/
+    fetchData();
+  }, [] )
 
   let router = createBrowserRouter(
     createRoutesFromElements([
       <Route path='/' element={<NavBar/>}>
         <Route path='/' element={<Home/>}/>
-        <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} amountNum={amountNum}/>}/>
+        <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} onDelete={deleteFromCart} version={ComponentProductVersion.primary}/>}/>
+        <Route path='/cart' element={<Cart products={products}/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
         <Route path='/profile' element={<Profile/>}/>
