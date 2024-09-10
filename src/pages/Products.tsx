@@ -2,6 +2,8 @@ import React from 'react'
 import '../App.css'
 import OneProduct from '../components/OneProduct'
 import { Product } from '../models/product'
+import Button from '../components/Button'
+import { useNavigate } from 'react-router-dom'
 
 interface ProductsProps {
   products: Product[];
@@ -17,6 +19,12 @@ export enum ComponentProductVersion {
 }
 
 const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, onDelete}) => {
+
+  const navigate = useNavigate();
+  const goToCart = () => {
+    navigate("/cart");
+  }
+
   return (
     <>
     <h1>PROIZVODI</h1>
@@ -29,6 +37,9 @@ const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, onDelete}
           onDelete={()=>onDelete(product.id)}
           version={ComponentProductVersion.primary}/>
         ))}
+    </div>
+    <div className="prod-button">
+      <Button label="Idi u korpu" onClick={goToCart}/>
     </div>
     </>
   )

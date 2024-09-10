@@ -2,14 +2,24 @@ import React from 'react'
 import { Product } from '../models/product'
 import OneProduct, { ComponentProductVersion } from '../components/OneProduct';
 import Button from '../components/Button';
+import { useNavigate } from "react-router-dom";
 
 interface CartProps {
   products: Product[];
+  onDelete: (id:number) => void;
 }
 
-const Cart: React.FC<CartProps> = ({products}) => {
+const Cart: React.FC<CartProps> = ({products, onDelete}) => {
 
   const filteredProducts = products.filter((product) => product.amount > 0);
+
+  const navigate = useNavigate();
+  const backToProd = () => {
+    navigate("/products");
+  }
+  const message = () => {
+    alert("Porudžbina poslata!");
+  }
 
   return (
     <>
@@ -27,7 +37,7 @@ const Cart: React.FC<CartProps> = ({products}) => {
                     product={product}
                     onAdd={()=>{}}
                     onRemove={()=>{}}
-                    onDelete={()=>{}}
+                    onDelete={onDelete}
                     version={ComponentProductVersion.secondary}/>
                 ))
             ) : (
@@ -36,8 +46,8 @@ const Cart: React.FC<CartProps> = ({products}) => {
         </div>
     </div>
     <div className="cart-buttons">
-        <Button label="Vrati se na proizvode" onClick={()=>{}}/>
-        <Button label="Poruči" onClick={()=>{}}/>
+        <Button label="Vrati se na proizvode" onClick={backToProd}/>
+        <Button label="Poruči" onClick={message}/>
     </div>
     </>
   )

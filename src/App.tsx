@@ -46,12 +46,10 @@ function App() {
   };
 
   const deleteFromCart = (id: number) => {
-    products.map((product) => {
+    products.map((product) => {      
       if(product.id == id) {
-        console.log("0/obrisano");
+        setAmountNum(amountNum-product.amount);
         product.amount = 0;
-        setAmountNum(0);
-        console.log("obrisano");
       }
     })
   }
@@ -78,8 +76,8 @@ function App() {
     createRoutesFromElements([
       <Route path='/' element={<NavBar/>}>
         <Route path='/' element={<Home/>}/>
-        <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} onDelete={deleteFromCart} version={ComponentProductVersion.primary}/>}/>
-        <Route path='/cart' element={<Cart products={products}/>}/>
+        <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} onDelete={()=>{}} version={ComponentProductVersion.primary}/>}/>
+        <Route path='/cart' element={<Cart products={products} onDelete={deleteFromCart}/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
         <Route path='/profile' element={<Profile/>}/>
