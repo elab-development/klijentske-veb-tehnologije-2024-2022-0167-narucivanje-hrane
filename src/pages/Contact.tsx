@@ -11,10 +11,19 @@ import i3 from '../assets/icons/tiktok icon.webp';
 const Contact: React.FC = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const message1 = () => {
+        alert("Vaše pitanje je zabeleženo!");
+      }
 
     const handleSendClick = () => {
         // Logika za slanje forme ili poruke
-        console.log(`Email: ${email}, Poruka: ${message}`);
+        if (email !== '' && message !== '') {
+            message1(); // Pozivamo samo ako su oba polja popunjena
+            console.log(`Email: ${email}, Poruka: ${message}`);
+        } else {
+            // Možete dodati dodatnu logiku ili upozorenje ako polja nisu popunjena
+            alert('Morate popuniti sva polja!');
+        }
     };
     return (
         <div className="contact-page">
@@ -40,9 +49,9 @@ const Contact: React.FC = () => {
                 </div>
             </div>
             <div className="social-icons">
-                <a href="#"><img src={i1} alt="Instagram" /></a>
-                <a href="#"><img src={i3} alt="TikTok" /></a>
-                <a href="#"><img src={i2} alt="Facebook" /></a>
+                <a href="https://www.instagram.com/glovo_srbija/"><img src={i1} alt="Instagram" /></a>
+                <a href="https://www.tiktok.com/@glovo.srbija"><img src={i3} alt="TikTok" /></a>
+                <a href="https://www.facebook.com/GlovoSrbija"><img src={i2} alt="Facebook" /></a>
             </div>
         </div>
     );
