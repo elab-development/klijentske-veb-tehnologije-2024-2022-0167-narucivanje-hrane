@@ -17,6 +17,13 @@ const Profile = () => {
                 <span>mailadresa@gmail.com</span>
                 <span>+381601111111</span>
             </div>
+            <div className="additional-info">
+                <h2>Adresa: Jove Ilića 154</h2>
+                <h2>Načini plaćanja:
+                <input type="checkbox" id="card" name="payment" value="card" /> Kartica 
+                <input type="checkbox" id="card" name="payment" value="cash" /> Keš po uzeću 
+                </h2>
+            </div>
         </div>
     </div>
     );
