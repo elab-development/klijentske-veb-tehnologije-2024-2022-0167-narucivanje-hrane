@@ -76,7 +76,8 @@ function App() {
     createRoutesFromElements([
       <Route path='/' element={<NavBar/>}>
         <Route path='/' element={<Home/>}/>
-        <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} onDelete={()=>{}} version={ComponentProductVersion.primary}/>}/>
+        <Route path='/products' element={<Products products = {products} onAdd={addToCart} onRemove={removeFromCart} 
+          onDelete={()=>{}} version={ComponentProductVersion.primary}/>}/>
         <Route path='/cart' element={<Cart products={products} onDelete={deleteFromCart}/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/signIn' element={<SignIn/>}/>

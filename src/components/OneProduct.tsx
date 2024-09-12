@@ -39,7 +39,7 @@ const OneProduct : React.FC<OneProductProps> = ({product, onAdd, onRemove, onDel
         <p className="card-desc">{product.description}</p>
         <div className="card-bottom">
           <h4 className="card-price">RSD {product.price}</h4>
-          <a className="btn" onClick={() => onAdd(product.id)}><CiSquarePlus className="icon" /></a>
+          <a className="btn" data-testid="plus-button" onClick={() => onAdd(product.id)}><CiSquarePlus className="icon" /></a>
           <p className="cart-num">{product.amount}</p>
           <a className="btn" onClick={() => onRemove(product.id)}><CiSquareMinus className="icon" /></a>
         </div>
