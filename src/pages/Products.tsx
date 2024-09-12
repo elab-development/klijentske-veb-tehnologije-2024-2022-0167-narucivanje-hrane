@@ -20,10 +20,10 @@ export enum ComponentProductVersion {
 
 const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, onDelete}) => {
 
-  const navigate = useNavigate();
-  const goToCart = () => {
-    navigate("/cart");
-  }
+  // const navigate = useNavigate();
+  // const goToCart = () => {
+  //   navigate("/cart");
+  // }
 
   return (
     <>
@@ -38,9 +38,9 @@ const Products: React.FC<ProductsProps> = ({products, onAdd, onRemove, onDelete}
           version={ComponentProductVersion.primary}/>
         ))}
     </div>
-    <div className="prod-button">
+    {/* <div className="prod-button">
       <Button label="Idi u korpu" onClick={goToCart}/>
-    </div>
+    </div> */}
     </>
   )
 }
