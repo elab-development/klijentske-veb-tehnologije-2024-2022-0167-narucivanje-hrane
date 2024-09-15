@@ -36,6 +36,40 @@
   background-color: #ff4500;
 }
 
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start; 
+    padding: 10px;
+    position: relative; 
+  }
+
+  .navbar-menu {
+    display: none; 
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    background: #f0ead6;
+    border-bottom: 2px solid #ff6f61;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-menu.active {
+    display: flex; 
+  }
+
+  .hamburger-menu {
+    display: flex; 
+  }
+
+  .hamburger-menu.active div {
+    background-color: #ff4500; 
+  }
+}
+
 /*HOME PAGE*/
 .home-container {
   text-align: center;
@@ -271,12 +305,39 @@
   height: 40px;
 }
 
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column; 
+    width: 90%; 
+    padding: 20px; 
+  }
+
+  .contact-image img {
+    width: 150px; 
+  }
+
+  .input-field, .input-textarea {
+    padding: 0px;
+    margin-bottom: 10px; 
+  }
+
+  .custom-button {
+    padding: 12px; 
+    width: 100%; 
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /*LOGIN PAGE*/
 
 html, body {
   height: 100%;
   margin: 0;
-  overflow: hidden; /* Prevent scrolling */
+  overflow: hidden; 
 }
 
 .sign-in-container {
@@ -351,7 +412,7 @@ html, body {
   }
 }
 
-/* Responsive design for mobile devices */
+
 @media (max-width: 768px) {
   .image-container img {
     width: 75%;
