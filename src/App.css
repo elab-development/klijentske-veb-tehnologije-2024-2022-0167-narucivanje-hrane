@@ -319,6 +319,57 @@
   width: 35%;
 }
 
+@media (max-width: 1024px) {
+  .sign-in-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-container h2 {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .button-group {
+    width: 90%;
+  }
+
+  .button-group button {
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    width: 100%;
+    max-width: none;
+  }
+
+  .form-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-group button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-container h2 {
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
 /* PROFILNA */
 
  .profile-container {
@@ -400,6 +451,90 @@
 input[type="checkbox"]{
   transform: scale(1.5);
   margin-left: 50px;
+}
+
+@media (max-width: 1024px) {
+  .profile-container {
+    padding: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-container img {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .details {
+    gap: 175px;
+    justify-content: center;
+  }
+
+  .contact-info {
+    gap: 100px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .profile-container h1 {
+    font-size: 36px;
+  }
+
+  .details h2 {
+    font-size: 26px;
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-container img {
+    margin-top: 55px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .details {
+    gap: 0px; 
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .profile-container h1 {
+    font-size: 28px;
+    text-align: left;
+  }
+
+  .details h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .additional-info h2 {
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  input[type="checkbox"] {
+    margin-left: 10px;
+    transform: scale(1.2);
+  }
 }
 
 /*GALERIJA*/
