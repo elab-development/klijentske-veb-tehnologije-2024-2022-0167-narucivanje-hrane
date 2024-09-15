@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import TextInput from '../components/TextInput';
 import Button from '../components/Button';
 import '../App.css';
@@ -7,9 +8,16 @@ import loginImage from '../assets/login/login.png';
 const SignIn: React.FC = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLoginClick = () => {
-        console.log(`Username: ${username}, Password: ${password}`);
+        if (username !== '' && password !== '') {
+            console.log(`Username: ${username}, Password: ${password}`);
+            navigate('/profile', {state: {username}});
+        } else {
+            alert('Morate popuniti sva polja!');
+        }
+
     };
 
     const handleRegisterClick = () => {

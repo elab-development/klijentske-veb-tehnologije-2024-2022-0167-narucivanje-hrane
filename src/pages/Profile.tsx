@@ -1,14 +1,18 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import '../App.css';
 import profileImage from '../assets/profile/profile.png';
 
-const Profile = () => {
+const Profile: React.FC = () => {
+    const location = useLocation();
+    const { username } = location.state || {};
 
     return (
 
         <div className="profile-container">
         <img src={profileImage} alt="Profile" />
         <div className="text-container">
-            <h1>Ime Prezime</h1>
+            <h1>{username ? username: 'Ime Prezime'}</h1>
             <div className="details">
                 <h2>Email</h2>
                 <h2>Broj telefona</h2>

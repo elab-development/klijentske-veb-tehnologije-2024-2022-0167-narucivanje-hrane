@@ -273,6 +273,12 @@
 
 /*LOGIN PAGE*/
 
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
 .sign-in-container {
   display: flex;
   justify-content: center;
@@ -321,7 +327,9 @@
 
 @media (max-width: 1024px) {
   .sign-in-container {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: auto;
   }
 
@@ -343,10 +351,12 @@
   }
 }
 
+/* Responsive design for mobile devices */
 @media (max-width: 768px) {
   .image-container img {
-    width: 100%;
+    width: 75%;
     max-width: none;
+    margin-top: 50px;
   }
 
   .form-container {

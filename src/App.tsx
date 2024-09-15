@@ -84,6 +84,8 @@ function App() {
         <Route path='/signIn' element={<SignIn/>}/>
         <Route path='/profile' element={<Profile/>}/>
         <Route path='/gallery' element={<Gallery/>}/>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/profile" element={<Profile />} />
 
       </Route>
     ])
