@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Cart from './pages/Cart'
 import SignIn from './pages/SignIn';
 import Profile from './pages/Profile';
+import Gallery from './pages/Gallery';
 import { Product } from './models/product';
 import { useEffect, useState } from 'react';
 import {
@@ -82,6 +83,7 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/signIn' element={<SignIn/>}/>
         <Route path='/profile' element={<Profile/>}/>
+        <Route path='/gallery' element={<Gallery/>}/>
 
       </Route>
     ])

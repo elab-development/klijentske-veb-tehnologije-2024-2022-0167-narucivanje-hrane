@@ -10,6 +10,7 @@ const NavBar: React.FC = () => {
       <Link to="/products">Proizvodi</Link>
       <Link to="/cart">Korpa</Link>
       <Link to="/contact">Kontakti</Link>
+      <Link to="/gallery">Galerija</Link>
       <Link to="/profile">Profil</Link>
       <Link to="/signIn"><button className="prijaviSeBtn">Prijavi se</button></Link>
     </nav>
