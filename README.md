@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# Naručivanje hrane
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Dobro došli u aplikaciju za naručivanje hrane. Osnovna namena ove aplikacije je pregled dostupnih jela i poručivanje istih na kućnu adresu.
 
-Currently, two official plugins are available:
+## Sadržaj
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Funkcionalnosti](#funkcionalnosti)
+- [Instalacija](#instalacija)
+- [Korišćenje](#korišćenje)
+- [Tehničke informacije](#tehničke-informacije)
+- [Kontakt](#kontakt)
 
-## Expanding the ESLint configuration
+## **Funkcionalnosti**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Navigacioni Meni:** Omogućava korisnicima jednostavnu navigaciju kroz različite delove aplikacije
+- **Spisak proizvoda:** Pregled proizvoda (jela) dostupnih za poručivanje
+- **Dodavanje proizvoda za poručivanje:** Dodavanje proizvoda u korpu korisnika radi kasnije kupovine
+- **Brisanje proizvoda:** Brisanje proizvoda iz korpe, ukoliko se odustane od kupovine
+- **Kontakt:** Kontaktiranje u slučaju dodatnik pitanja
+- **Galerija jela:** Prikaz slika jela iz restorana
+- **Paginacija:** Omogućava pregled fotografija na stranici Galerija
+- **Filtriranje:** Omogućava filtriranje proizvoda po ceni
 
-- Configure the top-level `parserOptions` property like this:
+## **Instalacija**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Da biste započeli instalaciju ove aplikacije, pratite sledeće korake:
+
+1. **Klonirajte repozitorijum i uđite u njega:**
+
+   ```bash
+   git clone https://github.com/elab-development/klijentske-veb-tehnologije-2024-2022-0167-narucivanje-hrane.git
+   cd klijentske-veb-tehnologije-2024-2022-0167-narucivanje-hrane
+   ```
+
+2. **Instalirajte zavisnosti:**
+
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+3. **Pokrenite aplikaciju:**
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- Nakon što su sve zavisnosti instalirane aplikaciju pokrećete lokalno kucanjem komande
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm run dev
 ```
+
+4. **Pristupite aplikaciji:**
+
+Otvorite web browser i idite na [http://localhost:5173](http://localhost:5173) za lokalni pristup aplikaciji
+
+## **Korišćenje**
+
+1. **Pregled proizvoda:**
+
+   - Možete pogledati dostupna jela na stranici Proizvodi i dodavati ih u korpu
+
+2. **Pregled korpe:**
+
+   - Možete proveriti svoju korpu pre poručivanja i ukloniti proizvode po želji.
+
+## **Tehničke informacije**
+
+- **Tehnologije:** React, TypeScript
+- **Zavisnosti:** Lista zavisnosti je navedena u `package.json` datoteci
+
+## **Kontakt**
+
+Za sva pitanja, sugestije ili prijave problema, kontaktirajte nas putem:
+
+- **GitHub:** [naručivanje hrane GitHub](https://github.com/elab-development/klijentske-veb-tehnologije-2024-2022-0167-narucivanje-hrane.git)
+
+Hvala što koristite aplikaciju za naručivanje hrane!

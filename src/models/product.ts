@@ -14,4 +14,9 @@ export class Product {
         this.price = price;
         this.amount = amount;
     }
+
+    calculateTotalPrice(): number {
+        return this.price * this.amount;
+    }
+    
 }

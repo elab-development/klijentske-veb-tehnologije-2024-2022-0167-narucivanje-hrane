@@ -24,7 +24,7 @@ const OneProduct : React.FC<OneProductProps> = ({product, onAdd, onRemove, onDel
       <div className="cart-card">
         <img className="cart-img" src={product.imagePath} alt={product.name} />      
         <h4 className="card-title">{product.name}</h4>
-        <h4 className="card-price">{product.price * product.amount} RSD</h4>
+        <h4 className="card-price">{product.calculateTotalPrice()} RSD</h4>
         <h4 className="cart-num">{product.amount}</h4>
         <a className="btn" onClick={() => onDelete(product.id)}><GoTrash/></a>
       </div>
